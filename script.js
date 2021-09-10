@@ -2,10 +2,12 @@ const canvas = document.getElementById("canvas");
 const increaseBtn = document.getElementById("increase");
 const decreaseBtn = document.getElementById("decrease");
 const sizeEl = document.getElementById("size");
+const colorEl = document.getElementById("color");
 const ctx = canvas.getContext("2d");
 
 let size = 10;
 let isPressed = false; /* ให้ค่าปกติเป็น เท็จ */
+let color ='black';
 
 canvas.addEventListener("mousedown", () => { /* เมื่อกดเมาส์ให้ค่าเป็นจริง */
     isPressed = true;
@@ -24,9 +26,14 @@ canvas.addEventListener("mousemove", (e) => {
     }
 });
 
+colorEl.addEventListener('click', (e) => { /* เปลี่ยนสี */
+    color = e.target.value;
+});
+
 function drawCircle(x, y) { /* ขนาดของพู่กัน เป็นก้อนวงกลม */
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2);
+    ctx.fillStyle = color;
     ctx.fill();
 }
 
@@ -64,4 +71,4 @@ function updateSizeOnScreen() { /* ตัวเลขขนาดไซส์ */
 
 // draw();
 
-//6.51
+//7.5
