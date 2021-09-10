@@ -7,13 +7,33 @@
 body{
     font-family: "Poppins", sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #afafaf;
+    background-color: #eee;
     margin: 0;
 }
 
 canvas {
-    border: 1px solid #111;
+    border: 2px solid rebeccapurple;
+}
+
+.toolbox {
+    background-color: rebeccapurple;
+    border: 1px solid rebeccapurple;
+    padding: 1rem;
+    width: 704px;
+}
+
+.toolbox > *{
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.25rem;
+    height: 50px;
+    width: 50px;
 }

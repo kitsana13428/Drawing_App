@@ -1,4 +1,7 @@
 const canvas = document.getElementById("canvas");
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decrease");
+const sizeEl = document.getElementById("size");
 const ctx = canvas.getContext("2d");
 
 let size = 10;
@@ -25,6 +28,30 @@ function drawCircle(x, y) { /* ขนาดของพู่กัน เป็
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2);
     ctx.fill();
+}
+
+increaseBtn.addEventListener('click', () => { /* ปุ๋มเพิ่ม และ ลดไซส์ */
+    size += 5;
+
+    if(size > 50) {
+        size = 50;
+    }
+
+    updateSizeOnScreen();
+});
+
+decreaseBtn.addEventListener('click', () => {
+    size -= 5;
+
+    if(size < 5) {
+        size = 5;
+    }
+
+    updateSizeOnScreen();
+});
+
+function updateSizeOnScreen() { /* ตัวเลขขนาดไซส์ */
+    sizeEl.innerText = size;
 }
 
 // function draw() {
