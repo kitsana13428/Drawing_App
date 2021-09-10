@@ -6,6 +6,16 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     background-color: #afafaf;
     margin: 0;
+}
+
+canvas {
+    border: 1px solid #111;
+    width: 500px;
+    height: 500px;
 }
