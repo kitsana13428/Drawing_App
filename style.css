@@ -11,7 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #eee;
+    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
@@ -24,7 +24,7 @@ canvas {
     border: 1px solid rebeccapurple;
     padding: 1rem;
     width: 704px;
-    display: flex   ;
+    display: flex;
 }
 
 .toolbox > *{
@@ -38,4 +38,8 @@ canvas {
     margin: 0.25rem;
     height: 50px;
     width: 50px;
+}
+
+.toolbox > *:last-child {
+    margin-left: auto;
 }
